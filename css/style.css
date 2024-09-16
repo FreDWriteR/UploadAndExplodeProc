@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #6CB36E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.upload-file-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Стиль для текстового поля, чтобы он выглядел как кнопка */
+input[type="text"] {
+    padding: 10px 15px;
+    background-color: #A1D7A3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Ширина текстового поля */
+    box-sizing: border-box; /* Включает padding в общую ширину */
+}
+
+input[type="text"]::placeholder {
+    color: #2c3e22;
+}
+
+.styled-file-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6CB36E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    z-index: 1;
+}
+
+.styled-file-button:hover {
+    background: #A1D7A3;
+    color: black;
+}
+
+button:hover {
+    background-color: #A1D7A3;
+    color: black;
+}
+
+#result {
+    margin-top: 20px;
+    max-width: 800px;
+    max-height: 350px;
+    overflow: auto;
+}
+
+#result:empty .explode-container {
+
+}
+
+.success-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.error-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.status {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.submit-file {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.js-file-name {
+    background: #6CB36E;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.js-file-name:empty {
+    display: none;
+}
+
+.upload-form-container {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: aliceblue;
+    border-radius: 15px;
+}
+
+.explode-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: aliceblue;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 0 15px;
+    width: 800px;
+}
